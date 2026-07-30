@@ -1,0 +1,928 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Take this 1-minute cutting board safety quiz to claim a $250 discount."
+    />
+    <title>Cutting Board Safety Quiz</title>
+
+    <link rel="stylesheet" href="./css/style.css?v=2.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <button class="back-btn" id="backBtn" type="button" aria-label="Go back">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <line x1="19" y1="12" x2="5" y2="12" />
+          <polyline points="12 19 5 12 12 5" />
+        </svg>
+        Back
+      </button>
+      <img class="logo" src="images/logo.png" alt="Plateful logo" />
+    </header>
+
+    <main id="main">
+      <!-- 1. Intro: age -->
+      <section class="screen" id="screen-intro" data-step="intro">
+        <h2>Take This 1-Minute Quiz To Get a $250 Discount</h2>
+        <p class="subhead"><strong>What’s your age range?</strong></p>
+        <div
+          class="options"
+          role="radiogroup"
+          aria-label="Age range"
+          data-question="age"
+          data-auto="true"
+        >
+          <label class="option"
+            ><input type="radio" name="age" value="Under 40" />Under 40</label
+          >
+          <label class="option"
+            ><input type="radio" name="age" value="40-64" />40-64</label
+          >
+          <label class="option"
+            ><input type="radio" name="age" value="65+" />65+</label
+          >
+        </div>
+        <button class="btn-primary" type="button" data-next>
+          Next
+          <span class="arrow" aria-hidden="true">
+            <img
+              src="./images/arrow.png"
+              alt="arrownext"
+              class="arrowimg"
+              width="25"
+              height="25"
+              aria-hidden="true"
+            />
+          </span>
+        </button>
+      </section>
+
+      <!-- 2. Frequency -->
+      <section class="screen" id="screen-frequency" data-step="frequency">
+        <h2>How often do you prep food on your cutting board?</h2>
+        <div
+          class="options"
+          role="radiogroup"
+          aria-label="Prep frequency"
+          data-question="frequency"
+          data-auto="true"
+        >
+          <label class="option"
+            ><input
+              type="radio"
+              name="frequency"
+              value="Multiple times per day"
+            />🕒 Multiple times per day</label
+          >
+          <label class="option"
+            ><input type="radio" name="frequency" value="Once per day" />🍽️ Once
+            per day</label
+          >
+          <label class="option"
+            ><input
+              type="radio"
+              name="frequency"
+              value="A few times per week"
+            />📆 A few times per week</label
+          >
+          <label class="option"
+            ><input type="radio" name="frequency" value="Occasionally" />⏳
+            Occasionally</label
+          >
+        </div>
+      </section>
+
+      <!-- 3. Food types -->
+      <section class="screen" id="screen-food" data-step="food">
+        <h2>What Do You Usually Prep on Your Cutting Board?</h2>
+        <div
+          class="options"
+          role="radiogroup"
+          aria-label="Food types"
+          data-question="food"
+          data-auto="true"
+        >
+          <label class="option"
+            ><input type="radio" name="food" value="Raw meat and fish" />🥩 Raw
+            meat and fish</label
+          >
+          <label class="option"
+            ><input type="radio" name="food" value="Fruits and vegetables" />🥕
+            Fruits and vegetables</label
+          >
+          <label class="option"
+            ><input type="radio" name="food" value="Cooked foods" />🍗 Cooked
+            foods</label
+          >
+          <label class="option"
+            ><input type="radio" name="food" value="A mix of everything" />🍽️ A
+            mix of everything</label
+          >
+        </div>
+      </section>
+
+      <!-- 4. Cut type (multi) -->
+      <section class="screen" id="screen-cut-type" data-step="cut-type">
+        <h2>How Do You Typically Cut Food?</h2>
+        <p class="hint">Select all that apply</p>
+        <div
+          class="options"
+          role="group"
+          aria-label="Cut type"
+          data-question="cutType"
+        >
+          <label class="option"
+            ><input type="checkbox" name="cutType" value="Slicing" />🔪
+            Slicing</label
+          >
+          <label class="option"
+            ><input type="checkbox" name="cutType" value="Dicing" />🔨
+            Dicing</label
+          >
+          <label class="option"
+            ><input type="checkbox" name="cutType" value="Chopping" />🪓
+            Chopping</label
+          >
+          <label class="option"
+            ><input
+              type="checkbox"
+              name="cutType"
+              value="Repetitive back-and-forth cutting"
+            />🔄 Repetitive back-and-forth cutting</label
+          >
+        </div>
+        <button class="btn-primary" type="button" data-next>
+          Next
+          <span class="arrow" aria-hidden="true">
+            <img
+              src="./images/arrow.png"
+              alt="arrownext"
+              class="arrowimg"
+              width="25"
+              height="25"
+              aria-hidden="true"
+            />
+          </span>
+        </button>
+      </section>
+
+      <!-- 5. Knife type -->
+      <section class="screen" id="screen-knife" data-step="knife">
+        <h2>What Type of Knife Do You Use Most Often?</h2>
+        <div
+          class="options"
+          role="radiogroup"
+          aria-label="Knife type"
+          data-question="knife"
+          data-auto="true"
+        >
+          <label class="option"
+            ><input type="radio" name="knife" value="Chef's knife" />🔪 Chef’s
+            knife</label
+          >
+          <label class="option"
+            ><input type="radio" name="knife" value="Paring knife" />✂️ Paring
+            knife</label
+          >
+          <label class="option"
+            ><input type="radio" name="knife" value="Serrated knife" />🥖
+            Serrated knife</label
+          >
+          <label class="option"
+            ><input type="radio" name="knife" value="Santoku knife" />🍣 Santoku
+            knife</label
+          >
+          <label class="option"
+            ><input type="radio" name="knife" value="Other" />➕ Other</label
+          >
+        </div>
+      </section>
+
+      <!-- 6. Lifespan -->
+      <section class="screen" id="screen-lifespan" data-step="lifespan">
+        <h2>How Long Have You Been Using Your Current Cutting Board?</h2>
+        <div
+          class="options"
+          role="radiogroup"
+          aria-label="Board lifespan"
+          data-question="lifespan"
+          data-auto="true"
+        >
+          <label class="option"
+            ><input type="radio" name="lifespan" value="Less than 6 months" />🆕
+            Less than 6 months</label
+          >
+          <label class="option"
+            ><input type="radio" name="lifespan" value="6-12 months" />📅 6–12
+            months</label
+          >
+          <label class="option"
+            ><input type="radio" name="lifespan" value="1-3 years" />⏳ 1–3
+            years</label
+          >
+          <label class="option"
+            ><input type="radio" name="lifespan" value="Over 3 years" />⚠️ Over
+            3 years</label
+          >
+        </div>
+      </section>
+
+      <!-- 7. Board type (image cards) -->
+      <section class="screen" id="screen-board" data-step="board">
+        <h2>Which Cutting Board Do You Use Most Often?</h2>
+        <div
+          class="card-grid"
+          role="radiogroup"
+          aria-label="Board type"
+          data-question="board"
+          data-auto="true"
+        >
+          <label class="card"
+            ><input type="radio" name="board" value="Plastic" /><img
+              src="images/plastic.avif"
+              alt="Plastic"
+              width="200"
+              height="140"
+              loading="lazy"
+            /><span>Plastic</span></label
+          >
+          <label class="card"
+            ><input type="radio" name="board" value="Wood" /><img
+              src="images/wood-bamboo.avif"
+              alt="Wood / Bamboo"
+              width="200"
+              height="140"
+              loading="lazy"
+            /><span>Wood / Bamboo</span></label
+          >
+          <label class="card"
+            ><input type="radio" name="board" value="Glass" /><img
+              src="images/glass.avif"
+              alt="Glass"
+              width="200"
+              height="140"
+              loading="lazy"
+            /><span>Glass</span></label
+          >
+          <label class="card"
+            ><input type="radio" name="board" value="Steel" /><img
+              src="images/steel.avif"
+              alt="Steel"
+              width="200"
+              height="140"
+              loading="lazy"
+            /><span>Steel</span></label
+          >
+          <label class="card"
+            ><input type="radio" name="board" value="Other" /><img
+              src="images/other.avif"
+              alt="Other"
+              width="200"
+              height="140"
+              loading="lazy"
+            /><span>Other</span></label
+          >
+        </div>
+      </section>
+
+      <!-- 8. Board info -->
+      <section class="screen" id="screen-board-info" data-step="board-info">
+        <div class="screen-container">
+          <h2 id="boardTitle">Plastic Boards Shed Microplastics Into Food</h2>
+          <p class="copy" id="boardSubtitle">
+            Every cut creates microscopic plastic fragments that break off into
+            your food.
+          </p>
+          <p class="copy" id="boardSubtitle2">
+            These microplastics can accumulate in the body and have been linked
+            to
+            <strong
+              >inflammation, hormone disruption, and long-term health
+              concerns.</strong
+            >
+          </p>
+          <div class="product-intro">
+            <div class="product-intro-left" id="boardMedia">
+              <video autoplay="" muted="" playsinline="" loop="">
+                <source
+                  src="https://cdn.shopify.com/videos/c/o/v/9ca6fac0eb484eef86d3cb24110cd00d.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+          </div>
+          <button class="btn-primary" type="button" data-next>
+            Next
+            <span class="arrow" aria-hidden="true">
+              <img
+                src="./images/arrow.png"
+                alt="arrownext"
+                class="arrowimg"
+                width="25"
+                height="25"
+                aria-hidden="true"
+              />
+            </span>
+          </button>
+        </div>
+      </section>
+
+      <!-- 9. Loader -->
+      <section
+        class="screen"
+        id="screen-analysis-transition"
+        data-step="analysis-transition"
+      >
+        <div class="transition-content">
+          <h2 class="text-center">Assessing Your Kitchen Safety...</h2>
+          <p class="copy text-center">
+            Analyzing food type, cutting frequency, knife impact, board
+            lifespan, and material behavior.
+          </p>
+          <div class="loader-wrapper">
+            <div class="circle-loader"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 10. Assessment -->
+      <section class="screen" id="screen-assessment" data-step="assessment">
+        <h1>Your Cutting Board Safety Assessment</h1>
+        <div class="assess-card">
+          <div class="assess-header">
+            <div class="assess-top">
+              <h3>Material Transfer Risk</h3>
+              <span class="risk-pill">High</span>
+            </div>
+            <div class="meter">
+              <div class="meter-flag">Your Level</div>
+              <div class="meter-track"></div>
+              <div class="meter-dot"></div>
+            </div>
+            <div class="meter-labels">
+              <span>Low</span><span>Medium</span><span>High</span>
+            </div>
+          </div>
+          <div class="assess-body">
+            <p>
+              Based on your answers, your cutting board is exposed to frequent
+              cutting and long-term use — conditions known to cause material
+              transfer into food.
+            </p>
+            <div class="materials" id="assessmentMaterials">
+              <div class="list-col">
+                <h4>Materials You're Exposed To:</h4>
+                <ul>
+                  <li>
+                    <img
+                      src="./images/prod-list-icn1.webp"
+                      alt="error"
+                      width="33"
+                      height="auto"
+                    />
+                    <p>Microplastics</p>
+                  </li>
+                  <li>
+                    <img
+                      src="./images/prod-list-icn2.webp"
+                      alt="error"
+                      width="33"
+                      height="auto"
+                    />
+                    <p>Chemical residues</p>
+                  </li>
+                  <li>
+                    <img
+                      src="./images/prod-list-icn3.webp"
+                      alt="error"
+                      width="33"
+                      height="auto"
+                    />
+                    <p>Bacterial biofilm</p>
+                  </li>
+                  <li>
+                    <img
+                      src="./images/prod-list-icn4.webp"
+                      alt="error"
+                      width="33"
+                      height="auto"
+                    />
+                    <p>Degraded polymer particles</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="prod_det_imgbx">
+                <img
+                  src="https://assets.prd.heyflow.com/flows/Fh8Gt0iSrNlqDz2cXdZ5/www/assets/3bf221f9-075d-4f6e-87b6-4c26a2af658c/large-icon.avif"
+                  alt="plateful"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="urgency">
+          <div class="u-head">
+            <img
+              src="./images/info-icon.webp"
+              alt="Info"
+              width="25"
+              height="25"
+            />
+            <p>Urgency Level: <span class="lvl">High</span></p>
+          </div>
+          <p class="urgency-content">
+            High material transfer means toxic substances can enter your body
+            with everyday cooking. Over time, repeated exposure may increase
+            long-term health risks.
+          </p>
+        </div>
+        <button class="btn-primary" type="button" data-next>
+          Next
+          <span class="arrow" aria-hidden="true">
+            <img
+              src="./images/arrow.png"
+              alt="arrownext"
+              class="arrowimg"
+              width="25"
+              height="25"
+              aria-hidden="true"
+            />
+          </span>
+        </button>
+      </section>
+
+      <!-- 11. Why switching fails -->
+      <section
+        class="screen fade-wrapper"
+        id="screen-why-fails"
+        data-step="why-fails"
+      >
+        <h2>Why Simply Switching Boards Doesn’t Solve the Problem</h2>
+        <div class="cross-list">
+          <p>❌ Plastic breaks down over time</p>
+          <p>❌ Wood & bamboo trap bacteria below the surface</p>
+          <p>❌ Glass chips and damages knives</p>
+          <p>❌ Steel lacks antibacterial protection & damages blades</p>
+          <p class="closer">
+            If the surface isn’t truly inert and non-porous, unwanted material
+            will always keep getting into your food.
+          </p>
+        </div>
+        <button class="btn-primary" type="button" data-next>
+          Next
+          <span class="arrow" aria-hidden="true">
+            <img
+              src="./images/arrow.png"
+              alt="arrownext"
+              class="arrowimg"
+              width="25"
+              height="25"
+              aria-hidden="true"
+            />
+          </span>
+        </button>
+      </section>
+
+      <!-- 12. Recommendation -->
+      <section
+        class="screen"
+        id="screen-recommendation"
+        data-step="recommendation"
+      >
+        <h2>Your Recommended Cutting Board Solution</h2>
+        <p class="copy">
+          Based on how you prep food, the knives you use, and long-term exposure
+          risk, the safest option is a cutting board made from
+          <strong>pure, medical-grade titanium.</strong>
+        </p>
+        <p class="copy">
+          Titanium remains inert and prevents material transfer into food.
+        </p>
+        <div style="height: 22px"></div>
+        <button class="btn-primary" type="button" data-next>
+          Next
+          <span class="arrow" aria-hidden="true">
+            <img
+              src="./images/arrow.png"
+              alt="arrownext"
+              class="arrowimg"
+              width="25"
+              height="25"
+              aria-hidden="true"
+            />
+          </span>
+        </button>
+      </section>
+
+      <!-- 13. Product intro -->
+      <section class="screen" id="screen-product" data-step="product">
+        <h2>Meet the Plateful Titanium Pro Cutting Board™</h2>
+        <div class="product-intro product-intro-new">
+          <div class="product-video product-intro-left">
+            <video autoplay="" muted="" playsinline="" loop="">
+              <source src="videos/video-two.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+
+        <ul class="check-list">
+          <li>Zero material transfer</li>
+          <li>Indestructible Naturally antibacterial</li>
+          <li>Knife-safe titanium surface</li>
+          <li>Dishwasher safe</li>
+          <li>Built for lifetime use</li>
+        </ul>
+        <button class="btn-primary" type="button" data-next>
+          Next
+          <span class="arrow" aria-hidden="true">
+            <img
+              src="./images/arrow.png"
+              alt="arrownext"
+              class="arrowimg"
+              width="25"
+              height="25"
+              aria-hidden="true"
+            />
+          </span>
+        </button>
+      </section>
+
+      <!-- 14. Feature: titanium -->
+      <section
+        class="screen"
+        id="screen-feat-titanium"
+        data-step="feat-titanium"
+      >
+        <h2>Made from Pure, Medical-Grade Titanium</h2>
+        <p class="copy">
+          Crafted from SGS-certified titanium with no coatings or chemical
+          layers. A stable, non-reactive surface designed for direct food
+          contact and long-term safety.
+        </p>
+        <div class="product-intro">
+          <div class="product-intro-left">
+            <video autoplay="" muted="" playsinline="" loop="">
+              <source src="videos/video-three.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+        <button class="btn-primary" type="button" data-next>
+          Next
+          <span class="arrow" aria-hidden="true">
+            <img
+              src="./images/arrow.png"
+              alt="arrownext"
+              class="arrowimg"
+              width="25"
+              height="25"
+              aria-hidden="true"
+            />
+          </span>
+        </button>
+      </section>
+
+      <!-- 15. Feature: Protects Knives -->
+      <section class="screen" id="screen-feat-knives" data-step="feat-knives">
+        <h2>Designed to Protect Your Knives</h2>
+        <p class="copy">
+          Titanium is <strong>3× softer than your knife </strong>edge, allowing
+          microscopic flex instead of grinding — helping blades stay sharper
+          longer.
+        </p>
+        <div class="product-intro">
+          <div class="product-intro-left">
+            <video autoplay="" muted="" playsinline="" loop="">
+              <source src="videos/video-four.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+        <button class="btn-primary" type="button" data-next>
+          Next
+          <span class="arrow" aria-hidden="true">
+            <img
+              src="./images/arrow.png"
+              alt="arrownext"
+              class="arrowimg"
+              width="25"
+              height="25"
+              aria-hidden="true"
+            />
+          </span>
+        </button>
+      </section>
+
+      <!-- 16. Feature: Clean -->
+      <section class="screen" id="screen-feat-clean" data-step="feat-clean">
+        <h2>Easy to Clean. Dishwasher Safe.</h2>
+        <p class="copy">
+          Non-porous and stain-resistant. No odors, no bacteria absorption, no
+          special care required.
+        </p>
+        <div class="product-intro">
+          <div class="product-intro-left">
+            <video autoplay="" muted="" playsinline="" loop="">
+              <source src="videos/video-five.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+        <button class="btn-primary" type="button" data-next>
+          Next
+          <span class="arrow" aria-hidden="true">
+            <img
+              src="./images/arrow.png"
+              alt="arrownext"
+              class="arrowimg"
+              width="25"
+              height="25"
+              aria-hidden="true"
+            />
+          </span>
+        </button>
+      </section>
+
+      <!-- 17. Feature: lifetime -->
+      <section
+        class="screen"
+        id="screen-feat-lifetime"
+        data-step="feat-lifetime"
+      >
+        <h2>Designed to Last a Lifetime</h2>
+        <p class="copy">
+          No warping. No cracking. No breakdown. Built for daily use and made to
+          be passed down for generations.
+        </p>
+        <p class="copy">
+          Backed by a
+          <strong>90-day money-back guarantee and a lifetime warranty</strong>
+          for complete peace of mind.
+        </p>
+        <img
+          class="screen-img"
+          src="images/tablet.avif"
+          alt="Durable titanium"
+          width="560"
+          height="380"
+        />
+        <button class="btn-primary" type="button" data-next>
+          Next
+          <span class="arrow" aria-hidden="true">
+            <img
+              src="./images/arrow.png"
+              alt="arrownext"
+              class="arrowimg"
+              width="25"
+              height="25"
+              aria-hidden="true"
+            />
+          </span>
+        </button>
+      </section>
+
+      <!-- 18. Trusted -->
+      <section class="screen" id="screen-trusted" data-step="trusted">
+        <h2>Trusted by 100,000+ Home Cooks</h2>
+        <p class="copy">
+          Thousands rely on Plateful titanium boards every day for safer prep,
+          cleaner kitchens, and peace of mind.
+        </p>
+        <img
+          class="screen-img"
+          src="images/reviewer-image.avif"
+          alt="Happy home cooks"
+          width="560"
+          height="380"
+        />
+        <button class="btn-primary" type="button" data-next>
+          Next
+          <span class="arrow" aria-hidden="true">
+            <img
+              src="./images/arrow.png"
+              alt="arrownext"
+              class="arrowimg"
+              width="25"
+              height="25"
+              aria-hidden="true"
+            />
+          </span>
+        </button>
+      </section>
+
+      <!-- 19. Submit / loading -->
+      <section class="screen" id="screen-submit" data-step="submit">
+        <h2 id="submitTitle">Applying Your $250 Discount&hellip;</h2>
+        <div class="progress-wrap">
+          <div class="progress-row">
+            <div class="row-top">
+              <span>Verifying eligibility</span><span class="pct">0%</span>
+            </div>
+            <div class="progress-bar"><div class="fill"></div></div>
+          </div>
+          <div class="progress-row">
+            <div class="row-top">
+              <span>Applying discount</span><span class="pct">0%</span>
+            </div>
+            <div class="progress-bar"><div class="fill"></div></div>
+          </div>
+          <div class="progress-row">
+            <div class="row-top">
+              <span>Preparing your offer</span><span class="pct">0%</span>
+            </div>
+            <div class="progress-bar"><div class="fill"></div></div>
+          </div>
+        </div>
+        <button class="btn-primary upper d-none" type="button" id="ctaBtn">
+          <div class="status-indicator">
+            <div class="icon-check-mark" style="display: none">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="currentColor"
+                viewBox="0 0 256 256"
+              >
+                <path fill="none" d="M0 0h256v256H0z"></path>
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="24"
+                  d="M216 72.005 104 184l-56-55.995"
+                ></path>
+              </svg>
+            </div>
+            <div class="icon-x-mark" style="display: none">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M18 6L6 18"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M6 6L18 18"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+            </div>
+            <div class="icon-spinner" style="display: none">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2V6"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <animateTransform
+                    attributeName="transform"
+                    attributeType="XML"
+                    type="rotate"
+                    from="0 12 12"
+                    to="360 12 12"
+                    dur="1s"
+                    repeatCount="indefinite"
+                  ></animateTransform>
+                </path>
+                <path
+                  d="M12 18V22"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  opacity="0.3"
+                ></path>
+                <path
+                  d="M4.93 4.93L7.76 7.76"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  opacity="0.3"
+                ></path>
+                <path
+                  d="M16.24 16.24L19.07 19.07"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  opacity="0.3"
+                ></path>
+                <path
+                  d="M2 12H6"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  opacity="0.3"
+                ></path>
+                <path
+                  d="M18 12H22"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  opacity="0.3"
+                ></path>
+                <path
+                  d="M4.93 19.07L7.76 16.24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  opacity="0.3"
+                ></path>
+                <path
+                  d="M16.24 7.76L19.07 4.93"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  opacity="0.3"
+                ></path>
+              </svg>
+            </div>
+          </div>
+          CLAIM MY $250 DISCOUNT
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            fill="currentColor"
+            viewBox="0 0 256 256"
+          >
+            <rect width="256" height="256" fill="none"></rect>
+            <path
+              d="M219.53563,121.02,50.62075,26.42762A8,8,0,0,0,39.178,36.09836l31.86106,89.211a8,8,0,0,1,0,5.38138L39.178,219.90164a8,8,0,0,0,11.44277,9.67074l168.91488-94.59233A8,8,0,0,0,219.53563,121.02Z"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="24"
+            ></path>
+            <line
+              x1="72"
+              y1="128"
+              x2="136"
+              y2="128"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="24"
+            ></line>
+          </svg>
+        </button>
+      </section>
+    </main>
+
+    <!-- Interstitial modal -->
+    <div
+      class="modal-overlay"
+      id="modalOverlay"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modalQuestion"
+    >
+      <div class="modal">
+        <p id="modalQuestion"></p>
+        <div class="modal-btns">
+          <button type="button" data-answer="Yes">Yes</button>
+          <button type="button" data-answer="No">No</button>
+        </div>
+      </div>
+    </div>
+    <script src="./js/script.js" defer></script>
+  </body>
+</html>
